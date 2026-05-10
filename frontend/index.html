@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Monitoring Dashboard</title>
+    <title>Solar Dashboard</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
     <div class="container">
 
-        <h1>AI-Powered Solar Tracking Dashboard</h1>
+        <h1>AI-Powered Solar Dashboard</h1>
 
-        <div class="card">
-            <h2>LDR Left</h2>
-            <p id="ldrLeft">0</p>
+        <div class="grid">
+
+            <div class="card">
+                <h2>LDR Left</h2>
+                <p id="ldrLeft">0</p>
+            </div>
+
+            <div class="card">
+                <h2>LDR Right</h2>
+                <p id="ldrRight">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Servo Angle</h2>
+                <p id="angle">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Voltage</h2>
+                <p id="voltage">0</p>
+            </div>
+            <div class="card">
+    <h2>Temperature</h2>
+    <p id="temperature">0</p>
+</div>
+
+<div class="card">
+    <h2>Humidity</h2>
+    <p id="humidity">0</p>
+</div>
+
+<div class="card">
+    <h2>Weather</h2>
+    <p id="weather">0</p>
+</div>
+
         </div>
 
-        <div class="card">
-            <h2>LDR Right</h2>
-            <p id="ldrRight">0</p>
+        <div class="chart-container">
+            <canvas id="lightChart"></canvas>
         </div>
 
-        <div class="card">
-            <h2>Servo Angle</h2>
-            <p id="angle">0</p>
-        </div>
-
-        <div class="card">
-            <h2>Voltage</h2>
-            <p id="voltage">0</p>
+        <div class="chart-container">
+            <canvas id="voltageChart"></canvas>
         </div>
 
     </div>
@@ -38,4 +68,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
